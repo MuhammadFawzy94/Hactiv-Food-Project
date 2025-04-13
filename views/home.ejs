@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partial/head', {title: "Home"}) %>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary text-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white" href="#">Hactiv Food</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/restaurant">Order Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="container py-5">
+        <div class="row align-items-center text-center text-md-start">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h1 class="display-4 fw-bold text-primary">Welcome to Hactiv Food</h1>
+                <p class="lead text-muted">Tempat pesan makanan online yang praktis, cepat, dan gak ribet!</p>
+                <a href="/restaurant" class="btn btn-primary btn-lg mt-3">Order Now!</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Description Section -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="fw-bold mb-4">*Selamat datang di Hactiv Food!*</h2>
+                <p class="fs-5 text-muted">
+                    Di Hactiv Food, kamu bisa cari, pilih, dan pesan makanan favoritmu langsung dari rumah. 
+                    Gak perlu keluar rumah, gak perlu antri. Tinggal klik, dan makanan langsung meluncur ke tempatmu.
+                </p>
+                <p class="fs-5 text-muted">
+                    Kami hadir buat kamu yang suka kepraktisan, dan juga buat bantu para pelaku usaha kuliner 
+                    menjangkau lebih banyak pelanggan secara digital.
+                </p>
+                <p class="fs-5 fw-medium text-primary">
+                    Yuk, mulai jelajahi menu favoritmu sekarang juga!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">© 2025 Hactiv Food. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>

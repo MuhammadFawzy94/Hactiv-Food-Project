@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name_restaurant": "Cepat Saji",
+        "imageURL" : "https://asset.kompas.com/crops/dzKHQZzNzDyWnNJ6HcfXZHE9iA4=/0x0:1000x667/1200x800/data/photo/2021/10/20/616fbfdd3e77b.jpg",
+        "address" : "Jalan cepat cepat"
+    },
+    {
+        "id": 2,
+        "name_restaurant": "DunkFood",
+        "imageURL" : "https://upload.wikimedia.org/wikipedia/commons/3/33/Hesburger_Espoon_Tapiola.jpg",
+        "address" : "Jalan Dunk Dunk"
+    },
+    {
+        "id": 3,
+        "name_restaurant": "Payakumbuah",
+        "imageURL" : "https://arsitag.b-cdn.net/wp-content/uploads/2022/12/image-10-1024x769.jpeg",
+        "address" : "Jalan Paya Paya"
+    },
+    {
+        "id": 4,
+        "name_restaurant": "Terong Ubur-ubur",
+        "imageURL" : "https://s.alicdn.com/@sc04/kf/H592b97deb8814de4bd2246da28bf07cc7.png_720x720q50.png",
+        "address" : "Jalan Ubur Ubur"
+    },
+    {
+        "id": 5,
+        "name_restaurant": "Cold Food",
+        "imageURL" : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/8d/1a/6d/a-view-from-our-riverroom.jpg?w=1000&h=700&s=1",
+        "address" : "Jalan Tiris"        
+    }
+]

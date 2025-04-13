@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partial/head', {title: "Menus"}) %>
+<body class="bg-light">
+    <%- include('partial/navbar') %>
+
+    <div class="container my-5">
+        <% if (data) { %>
+            <h1 class="text-center text-dark fw-bold mb-4"><%= data.name_restaurant %></h1>
+
+            <form class="d-flex justify-content-center mb-4" method="GET" action="/restaurant/<%= data.id %>">
+                <input class="form-control w-50 me-2" type="search" name="search" placeholder="Search menu..." aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <% if (data.Menus && data.Menus.length > 0) { %>
+                    <% data.Menus.forEach(el => { %>
+                        <div class="col">
+                            <div class="card h-100 shadow-sm">
+                                <h5 class="card-header bg-dark text-white text-center"><%= el.name_food %></h5>
+                                <div class="card-body text-center">
+                                    <% if (el.imgUrl) { %>
+                                        <img src="<%= el.imgUrl %>" class="img-fluid rounded mb-3" style="max-height: 200px;" alt="<%= el.name_food %>">
+                                    <% } else { %>
+                                        <p class="text-muted">No image available</p>
+                                    <% } %>
+                                    <h5 class="card-title text-primary">Rp.<%= el.price %></h5>
+                                    <p class="card-text"><%= el.description || 'No description available' %></p>
+                                    <form action="/input" method="POST">
+                                        <input type="hidden" name="MenuId" value="<%= el.id %>">
+                                        <input type="hidden" name="RestaurantId" value="<%= data.id %>">
+                                        <button type="submit" class="btn btn-primary rounded-pill px-4">Order</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                <% } else { %>
+                    <p class="text-center text-muted">No menus available for this restaurant.</p>
+                <% } %>
+            </div>
+        <% } else { %>
+            <div class="text-center my-5">
+                <h2 class="text-danger">Restaurant Not Found</h2>
+                <p class="text-muted">The restaurant you are looking for does not exist or an error occurred.</p>
+                <a href="/restaurant" class="btn btn-primary rounded-pill">Back to Restaurants</a>
+            </div>
+        <% } %>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>

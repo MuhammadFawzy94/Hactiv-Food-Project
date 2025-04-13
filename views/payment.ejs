@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partial/head', {title: "Payment"}) %>
+<body>
+  <%- include('partial/navbar') %>
+    <br>
+
+    <div class="container-fluid text-center">
+        <h1>Complete Your Payment</h1>
+        <p>Total Price: <%= totalPrice %></p>
+       
+        <h3>Your Orders:</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% orders.forEach(order => { %>
+                    <tr>
+                        <td><%= order.Menu.name_food %></td>
+                        <td><%= order.quantity %></td>
+                        <td>Rp. <%= order.Menu.price * order.quantity %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+     
+        <p>Scan the QR Code below to pay:</p>
+        <img src="<%= qrCodeUrl %>" alt="Payment QR Code" class="img-fluid" style="max-width: 300px;">
+        <br><br>
+        <form action="/order/done" method="POST">
+            <button type="submit" class="btn btn-success">Done Payment</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        // Tangani submit form
+        document.getElementById('donePaymentForm').addEventListener('submit', function(event) {
+            // Tampilkan alert sebelum form dikirim
+            alert('Pesananmu sedang disiapkan, mohon tunggu dan driver akan segera menghubungi');
+        });
+    </script>
+</body>
+</html>

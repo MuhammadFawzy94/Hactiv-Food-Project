@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name_food": "Nasi Padang",
+        "description": "makanan khas padang enak",
+        "price": "15000",
+        "imgUrl": "https://cdn.rri.co.id/berita/1/images/1689391542821-images_(22)/1689391542821-images_(22).jpeg",
+        "RestaurantId" : 3
+    },
+    {
+        "id": 2,
+        "name_food": "Nasi Uduk",
+        "description": "masakan nasi putih ditambahn bawang goreng",
+        "price": "20000",
+        "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJHAEu3Hh4NCYiurGspmdKNo7GVUgPrcEa2Q&s",
+        "RestaurantId" : 4
+    },
+    {
+        "id": 3,
+        "name_food": "Nasi Kuning",
+        "description": "nasi kuning ditambah krupuk putih dan sambel",
+        "price": "10000",
+        "imgUrl": "https://www.dapurkobe.co.id/wp-content/uploads/nasi-kuning-kobe.jpg",
+        "RestaurantId" : 4
+    },
+    {
+        "id": 4,
+        "name_food": "Nasi Rames",
+        "description": "nasi dengan ramesan super enak",
+        "price": "15000",
+        "imgUrl": "https://img-global.cpcdn.com/recipes/9734c3726f0fcb46/1200x630cq70/photo.jpg",
+        "RestaurantId" : 2
+    },
+    {
+        "id": 5,
+        "name_food": "Nasi Carok",
+        "description": "nasi putih dengan kombinasi nasi goreng dan gurih",
+        "price": "25000",
+        "imgUrl": "https://awsimages.detik.net.id/community/media/visual/2023/02/10/bebek-carok-5.jpeg?w=650",
+        "RestaurantId" : 1
+    }
+]
