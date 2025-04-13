@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partial/head', {title: "Profile"}) %>
+<body>
+    <!-- Navbar -->
+    <%- include('partial/navbar') %>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Your Profile</h1>
+
+        <% if (typeof error !== 'undefined') { %>
+            <div class="alert alert-danger text-center" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Hello, <%= user.username %>!</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <strong>Full Name:</strong> 
+                                <%= user.UserProfile && user.UserProfile.fullName ? user.UserProfile.fullName : 'Not set yet' %>
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Email:</strong> 
+                                <%= user.email || 'Not set yet' %>
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Address:</strong> 
+                                <%= user.UserProfile && user.UserProfile.address ? user.UserProfile.address : 'Not set yet' %>
+                            </li>
+                        </ul>
+                        <% if (!user.UserProfile || !user.UserProfile.fullName || !user.UserProfile.address) { %>
+                            <div class="alert alert-warning mt-3" role="alert">
+                                Please complete your profile by editing the details below.
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="/profile/edit" class="btn btn-primary">Edit Profile</a>
+                        <a href="/home" class="btn btn-secondary">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
